@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="fonts/pretendard.css" rel="stylesheet" />
+    <link href="public/css/main.css" rel="stylesheet" />
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header">
+            <h1><a href="#">현대 온라인HTA</a></h1>
+            <div class="header-utils">
+                <span class="user">Thomas Holland</span>
+                <button type="button" class="logout">Logout</button>
+            </div>
+        </header>
+        <div class="main">
+            <div id="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#"><i class="bi home"></i><span>HOME</span></a></li>
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-toggle">
+                            <i class="bi data"></i><span>ICE/EV 현황</span>
+                            <i class="arw"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="current"><a href="#">ICE 리스트</a></li>
+                            <li><a href="#">EV 리스트</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-toggle">
+                            <i class="bi graph"></i><span>통계/집계</span>
+                            <i class="arw"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">통계1</a></li>
+                            <li><a href="#">통계2</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-toggle">
+                            <i class="bi gear"></i><span>인증환경 설정</span>
+                            <i class="arw"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">설정1</a></li>
+                            <li><a href="#">설정2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- sidebar -->
+            <div id="content">
+                <!-- 메인 컨테이너 시작 -->
+                <div class="container-fluid">
+                    <!-- 주요 콘텐츠 행 시작 -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="filter-bar">
+                                <div class="filter-group">
+                                    <label class="form-label">Period</label>
+                                    <div class="form-dateset">
+                                        <select class="form-select">
+                                            <option>2022 1st</option>
+                                            <option>2022 2nd</option>
+                                            <option>2023 1st</option>
+                                        </select>
+                                        <span>~</span>
+                                        <select class="form-select">
+                                            <option>2022 1st</option>
+                                            <option>2022 2nd</option>
+                                            <option>2023 1st</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="filter-group">
+                                    <label class="form-label">Region</label>
+                                    <select class="form-select">
+                                        <option>Total</option>
+                                        <option>Asia</option>
+                                        <option>Europe</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-group">
+                                    <label class="form-label">Distributor</label>
+                                    <select class="form-select">
+                                        <option>Total</option>
+                                        <option>Dealer A</option>
+                                        <option>Dealer B</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="auto-tabs">
+                                <button class="btn btn-tab">Total</button>
+                                <button class="btn btn-tab current">ICE</button>
+                                <button class="btn btn-tab">EV</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-title ty1">ICE</div>
+                                    <div class="chart text-center">
+                                        <img src="./public/images/dummy1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt50">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-title ty1">EV</div>
+                                    <div class="chart text-center">
+                                        <img src="./public/images/dummy1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 주요 콘텐츠 행 끝 -->
+                </div>
+                <!-- 메인 컨테이너 끝 -->
+            </div>
+            <!-- cotent -->
+        </div>
+        <!-- main -->
+    </div>
+    <!-- <script src="node_modules/d3/dist/d3.min.js"></script> -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

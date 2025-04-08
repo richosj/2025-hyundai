@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="fonts/pretendard.css" rel="stylesheet" />
+    <link href="public/css/main.css" rel="stylesheet" />
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header">
+            <h1><a href="#">현대 온라인HTA</a></h1>
+            <div class="header-utils">
+                <span class="user">Thomas Holland</span>
+                <button type="button" class="logout">Logout</button>
+            </div>
+        </header>
+        <div class="main">
+            <div id="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#"><i class="bi home"></i><span>HOME</span></a></li>
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-toggle">
+                            <i class="bi data"></i><span>ICE/EV 현황</span>
+                            <i class="arw"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="current"><a href="#">ICE 리스트</a></li>
+                            <li><a href="#">EV 리스트</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-toggle">
+                            <i class="bi graph"></i><span>통계/집계</span>
+                            <i class="arw"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">통계1</a></li>
+                            <li><a href="#">통계2</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-toggle">
+                            <i class="bi gear"></i><span>인증환경 설정</span>
+                            <i class="arw"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">설정1</a></li>
+                            <li><a href="#">설정2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- sidebar -->
+            <div id="content">
+                <!-- 메인 컨테이너 시작 -->
+                <div class="container-fluid">
+                    <!-- 주요 콘텐츠 행 시작 -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="filter-bar">
+                                <div class="filter-group">
+                                    <label class="form-label">Period</label>
+                                    <div class="form-dateset">
+                                        <select class="form-select">
+                                            <option>2022 1st</option>
+                                            <option>2022 2nd</option>
+                                            <option>2023 1st</option>
+                                        </select>
+                                        <span>~</span>
+                                        <select class="form-select">
+                                            <option>2022 1st</option>
+                                            <option>2022 2nd</option>
+                                            <option>2023 1st</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="filter-group">
+                                    <label class="form-label">Region</label>
+                                    <select class="form-select">
+                                        <option>Total</option>
+                                        <option>Asia</option>
+                                        <option>Europe</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-group">
+                                    <label class="form-label">Distributor</label>
+                                    <select class="form-select">
+                                        <option>Total</option>
+                                        <option>Dealer A</option>
+                                        <option>Dealer B</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <table class="table table-bordered custom-table">
+                                        <thead>
+                                            <tr class="table-header">
+                                                <th rowspan="2" class="align-middle">Country</th>
+                                                <th rowspan="2" class="align-middle">Technician<br>TOTAL</th>
+                                                <th colspan="5" class="text-center">ICE</th>
+                                                <th colspan="4" class="text-center">EV</th>
+                                            </tr>
+                                            <tr class="table-header">
+                                                <th>Certified</th>
+                                                <th>Expert</th>
+                                                <th>Master</th>
+                                                <th>TOTAL</th>
+                                                <th>%</th>
+                                                <th>Certified</th>
+                                                <th>Expert</th>
+                                                <th>TOTAL</th>
+                                                <th>%</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="country-column">A30AB_Brunei</td>
+                                                <td>590</td>
+                                                <td>90</td>
+                                                <td></td>
+                                                <td>90</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>90</td>
+                                                <td></td>
+                                                <td>90</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="country-column">A30AB_Cambodia</td>
+                                                <td>50</td>
+                                                <td>50</td>
+                                                <td></td>
+                                                <td>50</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>50</td>
+                                                <td></td>
+                                                <td>50</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="country-column">A30AB_Hmid</td>
+                                                <td>540</td>
+                                                <td>540</td>
+                                                <td></td>
+                                                <td>540</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>540</td>
+                                                <td></td>
+                                                <td>540</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="country-column">A30AB_Hmt(thailand)</td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                                <td></td>
+                                                <td>0</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>0</td>
+                                                <td></td>
+                                                <td>0</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="country-column">A14A_HongKong</td>
+                                                <td>850</td>
+                                                <td>850</td>
+                                                <td></td>
+                                                <td>850</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>850</td>
+                                                <td></td>
+                                                <td>850</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="country-column">A16B_Laos</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="country-column">A16B_Macau</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td></td>
+                                                <td>5</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>5</td>
+                                                <td></td>
+                                                <td>5</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="country-column">A16B_Malaysia</td>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td></td>
+                                                <td>2</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>2</td>
+                                                <td></td>
+                                                <td>2</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="country-column">A14A_HongKong</td>
+                                                <td>454</td>
+                                                <td>454</td>
+                                                <td></td>
+                                                <td>454</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>454</td>
+                                                <td></td>
+                                                <td>454</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="country-column">A16B_Laos</td>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td></td>
+                                                <td>2</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>2</td>
+                                                <td></td>
+                                                <td>2</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- table -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 주요 콘텐츠 행 끝 -->
+                </div>
+                <!-- 메인 컨테이너 끝 -->
+            </div>
+            <!-- cotent -->
+        </div>
+        <!-- main -->
+    </div>
+    <!-- <script src="node_modules/d3/dist/d3.min.js"></script> -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

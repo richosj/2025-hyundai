@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="fonts/pretendard.css" rel="stylesheet" />
+    <link href="public/css/main.css" rel="stylesheet" />
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header">
+            <h1><a href="#">현대 온라인HTA</a></h1>
+            <div class="header-utils">
+                <span class="user">Thomas Holland</span>
+                <button type="button" class="logout">Logout</button>
+            </div>
+        </header>
+        <div class="main">
+            <div id="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#"><i class="bi home"></i><span>HOME</span></a></li>
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-toggle">
+                            <i class="bi data"></i><span>ICE/EV 현황</span>
+                            <i class="arw"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="current"><a href="#">ICE 리스트</a></li>
+                            <li><a href="#">EV 리스트</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-toggle">
+                            <i class="bi graph"></i><span>통계/집계</span>
+                            <i class="arw"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">통계1</a></li>
+                            <li><a href="#">통계2</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-toggle">
+                            <i class="bi gear"></i><span>인증환경 설정</span>
+                            <i class="arw"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">설정1</a></li>
+                            <li><a href="#">설정2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- sidebar -->
+            <div id="content">
+                <!-- 메인 컨테이너 시작 -->
+                <div class="container-fluid">
+                    <!-- 주요 콘텐츠 행 시작 -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="filter-bar">
+                                <div class="filter-group">
+                                    <label class="form-label">Period</label>
+                                    <div class="form-dateset">
+                                        <select class="form-select">
+                                            <option>2022 1st</option>
+                                            <option>2022 2nd</option>
+                                            <option>2023 1st</option>
+                                        </select>
+                                        <span>~</span>
+                                        <select class="form-select">
+                                            <option>2022 1st</option>
+                                            <option>2022 2nd</option>
+                                            <option>2023 1st</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="filter-group">
+                                    <label class="form-label">Region</label>
+                                    <select class="form-select">
+                                        <option>Total</option>
+                                        <option>Asia</option>
+                                        <option>Europe</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-group">
+                                    <label class="form-label">Distributor</label>
+                                    <select class="form-select">
+                                        <option>Total</option>
+                                        <option>Dealer A</option>
+                                        <option>Dealer B</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-title ty2">ICE Target 달성률</div>
+                                    <div id="gauge-container" class="d-flex gap-4">
+                                    <div class="gauge" data-value="90" data-label="Certi. Total" data-type="certi"></div>
+                                    <div class="gauge" data-value="84" data-label="Lv. 1" data-type="lv1"></div>
+                                    <div class="gauge" data-value="72" data-label="Lv. 2" data-type="lv2"></div>
+                                    <div class="gauge" data-value="65" data-label="Lv. 3" data-type="lv3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt50">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-title ty2">EV Target </div>
+                                    <div class="chart">
+                                        차트차트
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 주요 콘텐츠 행 끝 -->
+                </div>
+                <!-- 메인 컨테이너 끝 -->
+            </div>
+            <!-- cotent -->
+        </div>
+        <!-- main -->
+    </div>
+    <!-- <script src="node_modules/d3/dist/d3.min.js"></script> -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/d3.v7.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          document.querySelectorAll('.gauge').forEach(el => {
+            const value = +el.dataset.value;
+            const label = el.dataset.label;
+            const type = el.dataset.type;
+        
+            const size = 140;
+            const strokeWidth = 10;
+            const radius = (size - strokeWidth) / 2;
+            const startAngle = -Math.PI * 0.75;
+            const endAngle = Math.PI * 0.75;
+            const center = size / 2;
+        
+            const svg = d3.select(el)
+              .append('svg')
+              .attr('viewBox', `0 0 ${size} ${size}`)
+              .attr('width', size)
+              .attr('height', size);
+        
+            const g = svg.append('g')
+              .attr('transform', `translate(${center}, ${center})`);
+        
+            // 배경 아크
+            const baseArc = d3.arc()
+              .innerRadius(radius)
+              .outerRadius(radius)
+              .startAngle(startAngle)
+              .endAngle(endAngle);
+        
+            g.append('path')
+              .attr('d', baseArc())
+              .attr('stroke', '#e5eaf3')
+              .attr('stroke-width', strokeWidth)
+              .attr('fill', 'none')
+              .attr('stroke-linecap', 'round');
+        
+            // 값 아크
+            const valueArc = d3.arc()
+              .innerRadius(radius)
+              .outerRadius(radius)
+              .startAngle(startAngle)
+              .endAngle(startAngle + (endAngle - startAngle) * (value / 100));
+        
+            g.append('path')
+              .attr('d', valueArc())
+              .attr('stroke', '#96aee6')
+              .attr('stroke-width', strokeWidth)
+              .attr('fill', 'none')
+              .attr('stroke-linecap', 'round');
+        
+            // 눈금선
+            const ticks = 11;
+            for (let i = 0; i < ticks; i++) {
+              const angle = startAngle + ((endAngle - startAngle) * i / (ticks - 1));
+              const inner = radius - 6;
+              const outer = radius;
+              const x1 = inner * Math.cos(angle);
+              const y1 = inner * Math.sin(angle);
+              const x2 = outer * Math.cos(angle);
+              const y2 = outer * Math.sin(angle);
+        
+              g.append('line')
+                .attr('x1', x1)
+                .attr('y1', y1)
+                .attr('x2', x2)
+                .attr('y2', y2)
+                .attr('stroke', '#ccc')
+                .attr('stroke-width', 1.2)
+                .attr('stroke-linecap', 'round');
+            }
+        
+            // 퍼센트 텍스트
+            el.insertAdjacentHTML('beforeend', `<div class="percent">${value}<span style="font-size: 14px;">%</span></div>`);
+        
+            // 라벨
+            const labelDiv = document.createElement('div');
+            labelDiv.className = 'label';
+            labelDiv.innerText = label;
+            el.appendChild(labelDiv);
+          });
+        });
+        </script>
+
+
+    <script>
+        /*
+        document.addEventListener('DOMContentLoaded', () => {
+          document.querySelectorAll('.gauge').forEach(el => {
+            const value = +el.dataset.value;
+            const size = 140;
+            const strokeWidth = 10;
+            const radius = (size - strokeWidth) / 2;
+            const startAngle = -Math.PI * 0.75;
+            const endAngle = Math.PI * 0.75;
+        
+            const svg = d3.select(el)
+              .append('svg')
+              .attr('viewBox', `0 0 ${size} ${size}`)
+              .attr('width', size)
+              .attr('height', size);
+        
+            const g = svg.append('g')
+              .attr('transform', `translate(${size / 2}, ${size / 2})`);
+        
+            const backgroundArc = d3.arc()
+              .innerRadius(radius)
+              .outerRadius(radius)
+              .startAngle(startAngle)
+              .endAngle(endAngle);
+        
+            g.append('path')
+              .attr('d', backgroundArc())
+              .attr('stroke', '#e5eaf3')
+              .attr('stroke-width', strokeWidth)
+              .attr('fill', 'none')
+              .attr('stroke-linecap', 'round');
+        
+            const foregroundArc = d3.arc()
+              .innerRadius(radius)
+              .outerRadius(radius)
+              .startAngle(startAngle)
+              .endAngle(startAngle + (endAngle - startAngle) * (value / 100));
+        
+            g.append('path')
+              .attr('d', foregroundArc())
+              .attr('stroke', '#96aee6')
+              .attr('stroke-width', strokeWidth)
+              .attr('fill', 'none')
+              .attr('stroke-linecap', 'round');
+        
+            // 중앙 퍼센트 텍스트
+            el.insertAdjacentHTML('beforeend', `<div class="percent">${value}<span style="font-size: 14px;">%</span></div>`);
+          });
+        });
+        */
+        </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
