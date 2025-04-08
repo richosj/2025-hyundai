@@ -1,0 +1,11 @@
+# Ignore JSON files
+*.json
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore fonts directory
+fonts/
+
+# Ignore css directory
+css/
