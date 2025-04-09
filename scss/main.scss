@@ -38,7 +38,7 @@ button {
 
 /* Font settings */
 body {
-  font-family: 'Pretendard', sans-serif;
+  font-family: 'Hyundai Sans Head Office', sans-serif;
 }
 
 .login{
@@ -450,6 +450,18 @@ body, html {
   &.current{
     background: rgba(216, 237, 255, 1);
     color: rgba(71, 71, 71, 1);
+    &:hover,
+    &:active{
+      background: rgba(216, 237, 255, 1) !important;
+      color: rgba(71, 71, 71, 1) !important;
+    }
+  }
+  &:hover,
+  &:active{
+    background: rgba(232, 232, 232, 1) !important;
+    border-radius: 10px 10px 0 0;
+    border: 0;
+    color: rgba(132, 132, 132, 1) !important;
   }
 }
 
@@ -474,12 +486,22 @@ body, html {
   line-height: 29px;
   color: rgba(71, 71, 71, 1);
 }
-#gauge-container {
+.target-chart{
   display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  padding: 20px;
+  align-items: center;
+  gap: 0 100px;
+  padding-top: 50px;
+  .chart{
+    flex-grow: 1;
+  }
+}
 
+#gauge-container {
+  width: 290px;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 32px;
+  
   .gauge {
     width: 140px;
     height: 140px;
@@ -496,64 +518,100 @@ body, html {
 
     .percent {
       position: absolute;
-      top: 50%;
+      top: 45px;
       left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 22px;
+      transform: translateX(-50%);
+      font-size: 30px;
       font-weight: 600;
-      color: #5c5c5c;
+      color: #002c5f;
     }
 
     .label {
       margin-top: -10px;
-      padding: 4px 14px;
+      padding: 3px 14px;
       border-radius: 999px;
       font-size: 0.8rem;
+      text-align: center;
       font-weight: 500;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      width: 100px;
     }
 
     &[data-type="certi"] .label {
-      background-color: #8595aa;
+      background-color: #2b507a;
       color: #fff;
     }
     &[data-type="lv1"] .label {
-      background-color: #e5f6f4;
-      color: #3d6c75;
+      background-color: #dcf4ed;
+      color: #000000;
     }
     &[data-type="lv2"] .label {
-      background-color: #fff3df;
-      color: #b67800;
+      background-color: #d3eaf6;
+      color: #000000;
     }
     &[data-type="lv3"] .label {
-      background-color: #fce6e6;
-      color: #b64949;
+      background-color: #c9cee2;
+      color: #000000;
     }
   }
 }
 
 
 .table-header {
-  background-color: #d9edf7 !important; /* 하늘색 헤더 */
+   /* 하늘색 헤더 */
+  
 }
-
-.country-column {
-  background-color: #f5f5dc !important; /* 연한 베이지색 국가명 열 */
+.custom-table tbody{
+  .country-column {
+    background-color: #e0d7ce !important; /* 연한 베이지색 국가명 열 */
+    color: #082a51 !important;
+    font-weight: 700;
+    font-size: 14px;
+    border-right: 1px solid #a5aece !important;
+  }
+  tr{
+    td:nth-child(7){
+      border-right: 1px solid #a5aece !important;
+    }
+  }
 }
-
 /* 모든 th에 !important로 기본 스타일 무시 */
 .custom-table th {
-  background-color: #d9edf7 !important;
-  color: #333 !important;
+  //background-color: #d9edf7 !important;
+  color: #333;
 }
 
 /* 테이블 전체 테두리 설정 */
 .custom-table {
   border-collapse: collapse;
+  .table-header{
+    
+    th{
+      background-color: #e0faff;
+      color: #082a51;
+      font-size: 14px;
+    }
+    &.table-header-sub{
+      th{background-color: #e2e2e2 !important;}
+    }
+  }
 }
 
 .custom-table th, .custom-table td {
-  border: 1px solid #ddd !important;
+  border: 1px solid #a5aece !important;
   text-align: center;
   vertical-align: middle;
+}
+
+.custom-table tbody{
+  th,
+  td{
+    border-bottom-color: #e2e2e2 !important;
+  }
+  td{
+    color: #858585;
+    font-size: 16px;
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
 }
