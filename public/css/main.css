@@ -12091,10 +12091,13 @@ body, html {
   background-image: url(../images/gear.png);
 }
 #sidebar .sidebar-menu li.has-submenu .submenu {
-  display: none;
   background-color: #001F43;
-  border-top: 1px solid #4F73A3;
-  padding: 16px 0;
+  border-top: 1px solid #001F43;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  will-change: auto;
 }
 #sidebar .sidebar-menu li.has-submenu .submenu li + li {
   margin-top: 20px;
@@ -12135,7 +12138,9 @@ body, html {
   background-image: url(../images/triangle-down-on.png);
 }
 #sidebar .sidebar-menu li.has-submenu.open .submenu {
-  display: block;
+  max-height: 500px;
+  padding: 16px 0;
+  border-color: #4F73A3;
 }
 #sidebar .sidebar-menu li.has-submenu.open .arrow {
   transform: rotate(180deg);
