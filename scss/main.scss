@@ -10,6 +10,7 @@
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
   margin: 0;
   padding: 0;
+  font-family: "Hyundai Sans Text KR";
 }
 
 body,th,td,input,select,textarea,button{
@@ -43,7 +44,7 @@ button {
 
 /* Font settings */
 body {
-  font-family: 'Hyundai Sans Head KR', sans-serif;
+  font-family: 'Hyundai Sans Text KR', sans-serif;
 }
 
 .login{
