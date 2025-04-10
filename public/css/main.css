@@ -11862,6 +11862,10 @@ body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, ul, ol, li, figur
   padding: 0;
 }
 
+body, th, td, input, select, textarea, button {
+  font-size: 14px;
+}
+
 ul, ol {
   list-style: none;
 }
@@ -11882,11 +11886,12 @@ button {
   border: none;
   padding: 0;
   cursor: pointer;
+  font-size: 14px;
 }
 
 /* Font settings */
 body {
-  font-family: "Hyundai Sans Head Office", sans-serif;
+  font-family: "Hyundai Sans Head KR", sans-serif;
 }
 
 .login {
@@ -11983,7 +11988,7 @@ body, html {
   display: inline-flex;
   align-items: center;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   color: rgb(146, 146, 146);
   gap: 0 5px;
 }
@@ -12110,7 +12115,7 @@ body, html {
 }
 #sidebar .sidebar-menu li.has-submenu .submenu li a {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   color: rgb(176, 213, 255);
   display: flex;
   align-items: center;
@@ -12185,15 +12190,17 @@ body, html {
 }
 .global-score .stat-card .stat-row .total em {
   width: 101px;
+  font-size: 16px;
 }
 .global-score .stat-card .stat-row .total .value {
   font-weight: 700;
   color: #000;
+  font-size: 16px;
 }
 .global-score .notic {
   text-align: center;
   color: rgb(185, 185, 185);
-  font-size: 16px;
+  font-size: 14px;
 }
 .global-score .stat-card {
   box-shadow: none;
@@ -12262,7 +12269,7 @@ body, html {
 .filter-bar {
   display: flex;
   align-items: center;
-  gap: 0 80px;
+  gap: 0 60px;
   margin-bottom: 40px;
 }
 .filter-bar .filter-group {
@@ -12271,7 +12278,7 @@ body, html {
   gap: 0 20px;
 }
 .filter-bar .filter-group .form-label {
-  font-size: 16px;
+  font-size: 14px;
   color: #333;
   margin-bottom: 0;
   display: inline-flex;
@@ -12290,7 +12297,7 @@ body, html {
   min-width: 146px;
   height: 46px;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #fff;
   border-radius: 8px;
 }
@@ -12314,7 +12321,7 @@ body, html {
   border-radius: 6px 6px 0 0;
   border: 0;
   color: rgb(132, 132, 132);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 .btn-tab.current {
@@ -12338,7 +12345,7 @@ body, html {
 
 .card {
   border: 0;
-  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
 .card-body {
@@ -12349,22 +12356,29 @@ body, html {
 .card-title.ty1 {
   font-weight: 700;
   font-size: 22px;
-  line-height: 29px;
   color: rgb(75, 93, 158);
+  margin: -40px -40px 0;
+  padding: 17px 18px;
+  line-height: 1;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  margin-bottom: 40px;
 }
 
 .card-title.ty2 {
   font-weight: 500;
   font-size: 22px;
-  line-height: 29px;
+  margin: -40px -40px 0;
+  padding: 17px 18px;
+  line-height: 1;
+  border-bottom: 1px solid rgb(228, 228, 228);
   color: rgb(71, 71, 71);
+  margin-bottom: 40px;
 }
 
 .target-chart {
   display: flex;
   align-items: center;
   gap: 0 100px;
-  padding-top: 50px;
 }
 .target-chart .chart {
   flex-grow: 1;
@@ -12474,7 +12488,7 @@ body, html {
 }
 .custom-table tbody td {
   color: #858585;
-  font-size: 16px;
+  font-size: 14px;
   border-left: 0 !important;
   border-right: 0 !important;
 }
