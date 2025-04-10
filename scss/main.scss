@@ -256,13 +256,13 @@ body, html {
           transition: all 0.4s ease;
           will-change: auto;
           li+li{
-            margin-top: 20px;
+            margin-top: 15px;
           }
           li.current{
             a{
               color: rgba(0, 170, 210, 1);
               &::before{
-                background: url(../images/mn-arw-on.png) no-repeat 50% 50%;
+                background: url(../images/mn-arw-ons.png) no-repeat 50% 50%;
               }
             }
           }
@@ -445,6 +445,17 @@ body, html {
       font-size: 16px;
       color: #333;
       margin-bottom: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0 5px;
+      &::before{
+        content:"";
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        background: #000;
+        border-radius: 50%;
+      }
     }
 
     .form-select {
@@ -476,7 +487,7 @@ body, html {
   border-radius: 6px 6px 0 0;
   border: 0;
   color: rgba(132, 132, 132, 1);
-  font-size: 22px;
+  font-size: 14px;
   font-weight: 500;
   &.current{
     background: rgba(216, 237, 255, 1);
@@ -501,7 +512,7 @@ body, html {
 .card{border: 0;box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);}
 .card-body{
   padding: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .card-title.ty1{
@@ -599,6 +610,9 @@ body, html {
     font-weight: 700;
     font-size: 14px;
     border-right: 1px solid #a5aece !important;
+    em{
+      font-weight: 400;font-style: normal;
+    }
   }
   tr{
     td:nth-child(7){

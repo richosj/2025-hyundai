@@ -12100,13 +12100,13 @@ body, html {
   will-change: auto;
 }
 #sidebar .sidebar-menu li.has-submenu .submenu li + li {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 #sidebar .sidebar-menu li.has-submenu .submenu li.current a {
   color: rgb(0, 170, 210);
 }
 #sidebar .sidebar-menu li.has-submenu .submenu li.current a::before {
-  background: url(../images/mn-arw-on.png) no-repeat 50% 50%;
+  background: url(../images/mn-arw-ons.png) no-repeat 50% 50%;
 }
 #sidebar .sidebar-menu li.has-submenu .submenu li a {
   font-weight: 600;
@@ -12274,6 +12274,17 @@ body, html {
   font-size: 16px;
   color: #333;
   margin-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0 5px;
+}
+.filter-bar .filter-group .form-label::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: #000;
+  border-radius: 50%;
 }
 .filter-bar .filter-group .form-select {
   min-width: 146px;
@@ -12303,7 +12314,7 @@ body, html {
   border-radius: 6px 6px 0 0;
   border: 0;
   color: rgb(132, 132, 132);
-  font-size: 22px;
+  font-size: 14px;
   font-weight: 500;
 }
 .btn-tab.current {
@@ -12332,7 +12343,7 @@ body, html {
 
 .card-body {
   padding: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .card-title.ty1 {
@@ -12424,6 +12435,10 @@ body, html {
   font-weight: 700;
   font-size: 14px;
   border-right: 1px solid #a5aece !important;
+}
+.custom-table tbody .country-column em {
+  font-weight: 400;
+  font-style: normal;
 }
 .custom-table tbody tr td:nth-child(7) {
   border-right: 1px solid #a5aece !important;
