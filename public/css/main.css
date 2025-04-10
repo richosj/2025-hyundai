@@ -11906,11 +11906,11 @@ body {
   background: linear-gradient(270deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.015) 100%);
   backdrop-filter: blur(11px);
   width: 1073px;
-  height: 407px;
-  border-radius: 50px;
-  padding-top: 50px;
+  height: 390px;
+  border-radius: 10px;
+  padding-top: 40px;
   padding-right: 60px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   padding-left: 60px;
   gap: 0 235px;
   display: flex;
@@ -11925,6 +11925,7 @@ body {
 .login-frame .input .form-control {
   font-size: 20px;
   height: 56px;
+  border-radius: 3px;
 }
 .login-frame .input .form-control::placeholder {
   color: rgb(187, 187, 187);
@@ -11935,7 +11936,7 @@ body {
   background: rgb(0, 64, 151);
   color: #fff;
   height: 65px;
-  border-radius: 20px;
+  border-radius: 3px;
   font-weight: 700;
   font-size: 26px;
 }
@@ -12028,14 +12029,13 @@ body, html {
   padding: 0;
 }
 #sidebar .sidebar-menu > li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #4F73A3;
 }
 #sidebar .sidebar-menu > li > a {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 1.5rem;
-  color: #fff;
   text-decoration: none;
   position: relative;
   gap: 0 7px;
@@ -12050,16 +12050,16 @@ body, html {
   transition: all 0.35s;
 }
 #sidebar .sidebar-menu > li > a .bi.home {
-  background-image: url(../images/home.png);
+  background-image: url(../images/home-off.png);
 }
 #sidebar .sidebar-menu > li > a .bi.data {
-  background-image: url(../images/data.png);
+  background-image: url(../images/data-off.png);
 }
 #sidebar .sidebar-menu > li > a .bi.graph {
-  background-image: url(../images/graph.png);
+  background-image: url(../images/graph-off.png);
 }
 #sidebar .sidebar-menu > li > a .bi.gear {
-  background-image: url(../images/gear.png);
+  background-image: url(../images/gear-off.png);
 }
 #sidebar .sidebar-menu > li > a .arw {
   position: absolute;
@@ -12076,12 +12076,24 @@ body, html {
   font-weight: 700;
   font-size: 16px;
   transition: all 0.35s;
-  color: #fff;
+  color: rgb(176, 213, 255);
+}
+#sidebar .sidebar-menu li.has-submenu.open > a .bi.ice, #sidebar .sidebar-menu li.has-submenu.current > a .bi.ice {
+  background-image: url(../images/ice.png);
+}
+#sidebar .sidebar-menu li.has-submenu.open > a .bi.data, #sidebar .sidebar-menu li.has-submenu.current > a .bi.data {
+  background-image: url(../images/data.png);
+}
+#sidebar .sidebar-menu li.has-submenu.open > a .bi.graph, #sidebar .sidebar-menu li.has-submenu.current > a .bi.graph {
+  background-image: url(../images/graph.png);
+}
+#sidebar .sidebar-menu li.has-submenu.open > a .bi.gear, #sidebar .sidebar-menu li.has-submenu.current > a .bi.gear {
+  background-image: url(../images/gear.png);
 }
 #sidebar .sidebar-menu li.has-submenu .submenu {
   display: none;
   background-color: #001F43;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid #4F73A3;
   padding: 16px 0;
 }
 #sidebar .sidebar-menu li.has-submenu .submenu li + li {
@@ -12096,10 +12108,10 @@ body, html {
 #sidebar .sidebar-menu li.has-submenu .submenu li a {
   font-weight: 600;
   font-size: 16px;
-  color: #fff;
+  color: rgb(176, 213, 255);
   display: flex;
   align-items: center;
-  gap: 0 25px;
+  gap: 0 11px;
   padding-left: 33px;
 }
 #sidebar .sidebar-menu li.has-submenu .submenu li a::before {
@@ -12149,6 +12161,9 @@ body, html {
   flex-grow: 1;
 }
 
+.global-score {
+  width: 308px;
+}
 .global-score .head {
   background: rgb(248, 248, 248);
   height: 80px;
@@ -12162,6 +12177,13 @@ body, html {
   line-height: 29px;
   text-align: center;
   color: rgb(75, 93, 158);
+}
+.global-score .stat-card .stat-row .total em {
+  width: 101px;
+}
+.global-score .stat-card .stat-row .total .value {
+  font-weight: 700;
+  color: #000;
 }
 .global-score .notic {
   text-align: center;
@@ -12250,7 +12272,7 @@ body, html {
 }
 .filter-bar .filter-group .form-select {
   min-width: 146px;
-  height: 59px;
+  height: 46px;
   border-radius: 5px;
   font-size: 18px;
   background-color: #fff;
@@ -12266,14 +12288,14 @@ body, html {
 .auto-tabs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  gap: 0 10px;
+  gap: 0 5px;
   margin-bottom: 20px;
 }
 
 .btn-tab {
-  height: 59px;
+  height: 46px;
   background: rgb(232, 232, 232);
-  border-radius: 10px 10px 0 0;
+  border-radius: 6px 6px 0 0;
   border: 0;
   color: rgb(132, 132, 132);
   font-size: 22px;

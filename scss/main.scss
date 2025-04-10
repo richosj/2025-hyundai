@@ -57,11 +57,11 @@ body {
     background: linear-gradient(270deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.015) 100%);
     backdrop-filter: blur(11px);
     width: 1073px;
-    height: 407px;
-    border-radius: 50px;
-    padding-top: 50px;
+    height: 390px;
+    border-radius: 10px;
+    padding-top: 40px;
     padding-right: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     padding-left: 60px;
     gap: 0 235px;
     display: flex;
@@ -72,6 +72,7 @@ body {
       .form-control{
         font-size: 20px;
         height: 56px;
+        border-radius: 3px;
         &::placeholder{
           color: rgba(187, 187, 187, 1);
         }
@@ -83,7 +84,7 @@ body {
       background: rgba(0, 64, 151, 1);
       color: #fff;
       height: 65px;
-      border-radius: 20px;
+      border-radius: 3px;
       font-weight: 700;
       font-size: 26px;
     }
@@ -175,13 +176,12 @@ body, html {
     margin: 0;
     padding: 0;
     > li{
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 1px solid #4F73A3;
       > a{
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 16px 1.5rem;
-        color: #fff;
         text-decoration: none;
         position: relative;
         gap: 0 7px;
@@ -194,16 +194,17 @@ body, html {
           height: 36px;
           transition: all 0.35s;
           &.home{
-            background-image: url(../images/home.png);
+            background-image: url(../images/home-off.png);
           }
+
           &.data{
-            background-image: url(../images/data.png);
+            background-image: url(../images/data-off.png);
           }
           &.graph{
-            background-image: url(../images/graph.png);
+            background-image: url(../images/graph-off.png);
           }
           &.gear{
-            background-image: url(../images/gear.png);
+            background-image: url(../images/gear-off.png);
           }
         }
         .arw{
@@ -221,17 +222,35 @@ body, html {
           font-weight: 700;
           font-size: 16px;
           transition: all 0.35s;
-          color: #fff;
+          color: rgba(176, 213, 255, 1);
         }
       }
     }
     li {
       &.has-submenu {
-        
+        &.open,
+        &.current{
+          > a{
+            .bi{
+              &.ice{
+                background-image: url(../images/ice.png);
+              }
+              &.data{
+                background-image: url(../images/data.png);
+              }
+              &.graph{
+                background-image: url(../images/graph.png);
+              }
+              &.gear{
+                background-image: url(../images/gear.png);
+              }
+            }
+          }
+        }
         .submenu {
           display: none;
           background-color: #001F43;
-          border-top: 1px solid rgba(255, 255, 255, 0.5);
+          border-top: 1px solid #4F73A3;
           padding: 16px 0;
           li+li{
             margin-top: 20px;
@@ -247,10 +266,10 @@ body, html {
           li a {
             font-weight: 600;
             font-size: 16px;
-            color: #fff;
+            color: rgba(176, 213, 255, 1);
             display: flex;
             align-items: center;
-            gap: 0 25px;
+            gap: 0 11px;
             padding-left: 33px;
             &::before{
               display: block;
@@ -309,6 +328,7 @@ body, html {
   }
 }
 .global-score{
+  width: 308px;
   .head{
     background: rgba(248, 248, 248, 1);
     height: 80px;
@@ -316,13 +336,19 @@ body, html {
     align-items: center;
     justify-content: center;
     div{
-      
       font-weight: 700;
       font-size: 22px;
       line-height: 29px;
       text-align: center;
       color: rgba(75, 93, 158, 1);
     }
+  }
+  .stat-card .stat-row .total em{
+    width: 101px;
+  }
+  .stat-card .stat-row .total .value{
+    font-weight: 700;
+    color: #000;
   }
   .notic{
     text-align: center;
@@ -418,7 +444,7 @@ body, html {
 
     .form-select {
       min-width: 146px;
-      height: 59px;
+      height: 46px;
       border-radius: 5px;
       font-size: 18px;
       background-color: #fff;
@@ -436,13 +462,13 @@ body, html {
 .auto-tabs{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(0,1fr));
-  gap: 0 10px;
+  gap: 0 5px;
   margin-bottom: 20px;
 }
 .btn-tab{
-  height: 59px;
+  height: 46px;
   background: rgba(232, 232, 232, 1);
-  border-radius: 10px 10px 0 0;
+  border-radius: 6px 6px 0 0;
   border: 0;
   color: rgba(132, 132, 132, 1);
   font-size: 22px;
