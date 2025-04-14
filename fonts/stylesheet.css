@@ -1,0 +1,65 @@
+/* Hyundai Sans Head KR */
+@font-face {
+    font-family: 'Hyundai Sans Text KR';
+    src: url('./HyundaiSansHeadKRBold.woff2') format('woff2'),
+         url('./HyundaiSansHeadKRBold.woff') format('woff'),
+         url('./HyundaiSansHeadKRBold.eot');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Hyundai Sans Text KR';
+    src: url('./HyundaiSansHeadKRLight.woff2') format('woff2'),
+         url('./HyundaiSansHeadKRLight.woff') format('woff'),
+         url('./HyundaiSansHeadKRLight.eot');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Hyundai Sans Text KR';
+    src: url('./HyundaiSansHeadKRMedium.woff2') format('woff2'),
+         url('./HyundaiSansHeadKRMedium.woff') format('woff'),
+         url('./HyundaiSansHeadKRMedium.eot');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Hyundai Sans Text KR';
+    src: url('./HyundaiSansHeadKRRegular.woff2') format('woff2'),
+         url('./HyundaiSansHeadKRRegular.woff') format('woff'),
+         url('./HyundaiSansHeadKRRegular.eot');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Hyundai Sans Text KR */
+  @font-face {
+    font-family: 'Hyundai Sans Text KR';
+    src: url('./HyundaiSansTextKRBold.woff2') format('woff2'),
+         url('./HyundaiSansTextKRBold.woff') format('woff'),
+         url('./HyundaiSansTextKRBold.eot');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Hyundai Sans Text KR';
+    src: url('./HyundaiSansTextKRMedium.woff2') format('woff2'),
+         url('./HyundaiSansTextKRMedium.woff') format('woff'),
+         url('./HyundaiSansTextKRMedium.eot');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Hyundai Sans Text KR';
+    src: url('./HyundaiSansTextKRRegular.woff2') format('woff2'),
+         url('./HyundaiSansTextKRRegular.woff') format('woff'),
+         url('./HyundaiSansTextKRRegular.eot');
+    font-weight: 400;
+    font-style: normal;
+  }
+  

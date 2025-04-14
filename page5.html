@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="fonts/pretendard.css" rel="stylesheet" />
+    <link href="fonts/stylesheet.css" rel="stylesheet" />
     <link href="public/css/main.css" rel="stylesheet" />
     <title>Document</title>
 
@@ -60,6 +60,7 @@
             <!-- sidebar -->
             <div id="content">
                 <!-- 메인 컨테이너 시작 -->
+                <div class="page-title">Certification Total</div>
                 <div class="container-fluid">
                     <!-- 주요 콘텐츠 행 시작 -->
                     <div class="row">
@@ -103,12 +104,42 @@
                         </div>
                     </div>
                     
+                    
                     <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-end content-btn-utils">
+                                <button><i class="icon-excel"></i>Excel download</button>
+                            </div>
+                        </div>
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
 
+                                    <div class="card-content-title">Certification Data</div>
+
+                                    <div class="d-flex justify-content-end content-btn-utils">
+                                        <button><i class="icon-excel"></i>Excel download</button>
+                                    </div>
+
+                                    <div class="notice-container">
+                                        <strong>Notice</strong>
+                                        <div>Last Updated On: The last user who updated the data</div>
+                                    </div>
+
                                     <table class="table table-bordered custom-table">
+                                        <colgroup>
+                                            <col style="width: auto;" />
+                                            <col style="width: 8%;" />
+                                            <col style="width: 9%;" />
+                                            <col style="width: 9%;" />
+                                            <col style="width: 9%;" />
+                                            <col style="width: 9%;" />
+                                            <col style="width: 8%;" />
+                                            <col style="width: 9%;" />
+                                            <col style="width: 9%;" />
+                                            <col style="width: 9%;" />
+                                            <col style="width: 8%;" />
+                                        </colgroup>
                                         <thead>
                                             <tr class="table-header">
                                                 <th rowspan="2" class="align-middle">Country</th>
@@ -116,7 +147,7 @@
                                                 <th colspan="5" class="text-center">ICE</th>
                                                 <th colspan="4" class="text-center">EV</th>
                                             </tr>
-                                            <tr class="table-header">
+                                            <tr class="table-header table-header-sub">
                                                 <th>Certified</th>
                                                 <th>Expert</th>
                                                 <th>Master</th>
@@ -130,7 +161,7 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="country-column">A30AB_Brunei</td>
+                                                <td class="country-column"><em class="rg">A30AB_</em>Brunei</td>
                                                 <td>590</td>
                                                 <td>90</td>
                                                 <td></td>
@@ -143,7 +174,7 @@
                                                 <td></td>
                                             </tr>
                                             <tr>
-                                                <td class="country-column">A30AB_Cambodia</td>
+                                                <td class="country-column"><em class="rg">A30AB_</em>Cambodia</td>
                                                 <td>50</td>
                                                 <td>50</td>
                                                 <td></td>
@@ -156,7 +187,7 @@
                                                 <td></td>
                                             </tr>
                                             <tr>
-                                                <td class="country-column">A30AB_Hmid</td>
+                                                <td class="country-column"><em class="rg">A30AB_</em>Hmid</td>
                                                 <td>540</td>
                                                 <td>540</td>
                                                 <td></td>
@@ -169,7 +200,7 @@
                                                 <td></td>
                                             </tr>
                                             <tr>
-                                                <td class="country-column">A30AB_Hmt(thailand)</td>
+                                                <td class="country-column"><em class="rg">A30AB_</em>Hmt(thailand)</td>
                                                 <td>0</td>
                                                 <td>0</td>
                                                 <td></td>
@@ -182,7 +213,7 @@
                                                 <td></td>
                                             </tr>
                                             <tr>
-                                                <td class="country-column">A14A_HongKong</td>
+                                                <td class="country-column"><em class="rg">A14A_</em>HongKong</td>
                                                 <td>850</td>
                                                 <td>850</td>
                                                 <td></td>
@@ -195,7 +226,7 @@
                                                 <td></td>
                                             </tr>
                                             <tr>
-                                                <td class="country-column">A16B_Laos</td>
+                                                <td class="country-column"><em class="rq">A16B_</em>Laos</td>
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
@@ -208,7 +239,7 @@
                                                 <td></td>
                                             </tr>
                                             <tr>
-                                                <td class="country-column">A16B_Macau</td>
+                                                <td class="country-column"><em class="rg">A16B_</em>Macau</td>
                                                 <td>5</td>
                                                 <td>5</td>
                                                 <td></td>
@@ -221,7 +252,7 @@
                                                 <td></td>
                                             </tr>
                                             <tr>
-                                                <td class="country-column">A16B_Malaysia</td>
+                                                <td class="country-column"><em class="rg">A16B_</em>Malaysia</td>
                                                 <td>2</td>
                                                 <td>2</td>
                                                 <td></td>
@@ -234,7 +265,7 @@
                                                 <td></td>
                                             </tr>
                                             <tr>
-                                                <td class="country-column">A14A_HongKong</td>
+                                                <td class="country-column"><em class="rg">A14A_</em>HongKong</td>
                                                 <td>454</td>
                                                 <td>454</td>
                                                 <td></td>
@@ -247,7 +278,7 @@
                                                 <td></td>
                                             </tr>
                                             <tr>
-                                                <td class="country-column">A16B_Laos</td>
+                                                <td class="country-column"><em class="rq">A16B_</em>Laos</td>
                                                 <td>2</td>
                                                 <td>2</td>
                                                 <td></td>
@@ -265,6 +296,13 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-12">
+                            <div class="function-footer">
+                                <button class="button btn-white">Confirm</button>
+                                <button class="button btn-white">Modify</button>
+                                <button class="button btn-blue">Delete</button>
+                            </div>
+                        </div>
                     </div>
                     <!-- 주요 콘텐츠 행 끝 -->
                 </div>
@@ -274,9 +312,87 @@
         </div>
         <!-- main -->
     </div>
+
+    <div class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content modal-content-form">
+            <div class="modal-header">
+                <h5 class="modal-title">Account Info</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modal-form">
+                <div class="form-group">
+                    <label class="form-label">User ID</label>
+                    <input type="text" class="form-control" placeholder="Enter Only When changing your id">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control form-password" placeholder="Enter Only When changing your password">
+                    <button class="btn-show-password"></button>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="User Name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">E-mail</label>
+                    <input type="text" class="form-control" placeholder="mail@hyundai.com">
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="button btn-white" data-bs-dismiss="modal">Modify</button>
+                <button type="button" class="button btn-blue">Delete</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content modal-content-form">
+            <div class="modal-header">
+                <h5 class="modal-title">Password Change</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modal-form">
+                
+                <div class="form-group">
+                    <label class="form-label">Password to <br>Change</label>
+                    <input type="password" class="form-control form-password" placeholder="Enter Only When changing your password">
+                    <button class="btn-show-password"></button>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Password to <br>Change Check</label>
+                    <input type="password" class="form-control" placeholder="Enter Only When changing your password">
+                </div>
+                
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="button btn-white" data-bs-dismiss="modal">Modify</button>
+                <button type="button" class="button btn-blue">Change</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    
     <!-- <script src="node_modules/d3/dist/d3.min.js"></script> -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.querySelectorAll('.btn-show-password').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const input = this.parentElement.querySelector('.form-password');
+                if (!input) return;
+
+                const isVisible = input.type === 'text';
+                input.type = isVisible ? 'password' : 'text';
+                this.classList.toggle('active', !isVisible);
+            });
+        });
+
+    </script>
 </body>
 
 </html>
